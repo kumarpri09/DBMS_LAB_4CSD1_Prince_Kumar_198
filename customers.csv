@@ -1,11 +1,11 @@
-custID,Name,country,quantity
-1,Rohan,China,8
-2,Rohan,China,4
-3,Raj,Australia,3
-4,Raju,US,6
-5,Rosy,Russia,4
-6,Rohit,Japan,9
-7,Roy,Japan,8
-8,Ronshi,China,7
-9,Ronit,Japan,6
-10,Raju,Japan,8
+create table customers(custID integer(10) primary key,Name varchar(20),country varchar(20),quantity integer(10));
+insert into customers values(1,"Rohan","China",8);
+insert into customers values(2,"Rohan","China",4);
+insert into customers values(3,"Raj","Australia",3);
+insert into customers values(4,"Raju","US",6);
+insert into customers values(5,"Rosy","Russia",4);
+insert into customers values(6,"Rohit,"Japan",9);
+insert into customers values(7,"Roy","Japan",8);
+insert into customers values(8,"Ronshi","China",7);
+insert into customers values(9,"Ronit","Japan",6);
+insert into customers values(10,"Raju","Japan",8);
