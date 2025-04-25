@@ -1,0 +1,49 @@
+<-TO IMPLEMENT NESTED QUERIES-> 
+CREATE table employee (eno integer(10) primary key, ename varchar(20), addr varchar(20), salary integer(10), deptno. integer(4));
+
+Questies:
+
+1. select ename , eno, addr from employee where  salary > (select salary from employee where ename = 'jones')
+2. select ename , eno from employee where  salary < any(select salary from employee where deptno.  = '10')
+3. select * from employee x where x.salary > (select avg (salary ) from employee where dept no. = x.deptno.)
+
+
+
+<- Joins in SQL-> 
+INNER JOIN
+
+SELECT Studentcourse_table.course_ID, Student_table.Name, Student_table.age
+FROM student_table
+INNER JOIN studentcourse_table ON student_table.course_ID = studentcourse_table.course_ID;
+
+Left join 
+
+SELECT Studentcourse_table.course_ID, Student_table.Name, Student_table.age
+FROM student_table
+left JOIN studentcourse_table ON student_table.Roll_No = studentcourse_table.Roll_No;
+
+RIGHT JOIN
+
+SELECT Studentcourse_table.course_ID, Student_table.Name, Student_table.age
+FROM student_table
+Right JOIN studentcourse_table ON student_table.Roll_No = studentcourse_table.Roll_No;
+
+Full Join:
+
+SELECT Studentcourse_table.course_ID, Student_table.Name, Student_table.age
+FROM student_table
+Full JOIN studentcourse_table ON student_table.Roll_No = studentcourse_table.Roll_No;
+
+
+
+<-Introduction to grouping clauses GROUP BY, ORDER BY &  HAVING ->
+
+create table customers (custID integer(10) primary key, name varchar(20), country varchar(20));
+
+Queries:
+select  count(cust_id), country from customer, GROUP BY country;
+select COUNT(cust_id ),country FROM  customers GROUP BY country HAVING  COUNT (cust_id)>2;
+select count(custid ),country FROM customers GROUP BY country HAVING count (customerid) >2 ORDER BY count(cust_id) asc, country desc;
+create view custview as select * from customers ;
+drop view custview;
+
